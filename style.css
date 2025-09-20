@@ -1,0 +1,15 @@
+body { font-family: Arial, sans-serif; background:#f5f5f5; margin:0; padding:0; text-align:center;
+}
+header { background:#0077cc; color:white; padding:15px; text-align:center; }
+nav { text-align:center; margin:10px 0; }
+nav button { margin:5px; padding:10px 15px; border:none; background:white; color:#0077cc; font-weight:bold; cursor:pointer; border-radius:5px; }
+nav button:hover { background:#005fa3; color:white; }
+.page-section { padding:20px; }
+.hidden { display:none; }
+ul { list-style:none; padding:0; }
+ul li { background:white; margin:5px 0; padding:10px; border-radius:5px; }
+form input, form select { margin:5px; padding:8px; }
+form button { padding:8px 12px; margin-top:5px; cursor:pointer; }
+.auth-container { max-width:600px; margin:50px auto; background:white; padding:20px; border-radius:10px; }
+.auth-section { margin-bottom:30px; }
+hr { margin:30px 0; }
