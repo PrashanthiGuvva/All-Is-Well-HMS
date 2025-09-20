@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All is Well Hospital - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🏥 All is Well Hospital Dashboard</h1>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <nav>
+        <button onclick="showSection('appointmentsSection')">Appointments</button>
+        <button onclick="showSection('paymentsSection')">Payments</button>
+        <button onclick="showSection('servicesSection')">Services</button>
+        <button onclick="showSection('receiptsSection')">Receipts</button>
+        <button onclick="showSection('insuranceSection')">Insurance</button>
+    </nav>
+
+    <main>
+        <!-- Appointments -->
+        <section id="appointmentsSection" class="page-section hidden">
+            <h2>Appointments</h2>
+            <div id="patientAppointmentsDiv">
+                <h3>Book Appointment</h3>
+                <form id="appointmentForm" onsubmit="addAppointment(event)">
+                    <select id="doctorSelect" required></select>
+                    <input type="datetime-local" id="appointmentTime" required>
+                    <input type="text" id="status" placeholder="Status" required>
+                    <button type="submit">Book Appointment</button>
+                </form>
+            </div>
+            <ul id="appointmentsList"></ul>
+        </section>
+
+        <!-- Payments -->
+        <section id="paymentsSection" class="page-section hidden">
+            <h2>Payments</h2>
+            <div id="patientPaymentsDiv">
+                <h3>Make Payment</h3>
+                <form id="paymentForm" onsubmit="addPayment(event)">
+                    <input type="number" id="paymentAmount" placeholder="Amount" required>
+                    <input type="text" id="paymentMethod" placeholder="Method" required>
+                    <input type="text" id="paymentNote" placeholder="Note">
+                    <button type="submit">Pay</button>
+                </form>
+            </div>
+            <ul id="paymentsList"></ul>
+        </section>
+
+        <!-- Services -->
+        <section id="servicesSection" class="page-section hidden">
+            <h2>Services</h2>
+            <button onclick="loadServices()">Check Services</button>
+            <ul id="servicesList"></ul>
+        </section>
+
+        <!-- Receipts -->
+        <section id="receiptsSection" class="page-section hidden">
+            <h2>Receipts</h2>
+            <button onclick="loadReceipts()">Check Receipts</button>
+            <ul id="receiptsList"></ul>
+        </section>
+
+        <!-- Insurance -->
+        <section id="insuranceSection" class="page-section hidden">
+            <h2>Insurance</h2>
+            <button onclick="loadInsurance()">Check Insurance</button>
+            <ul id="insuranceList"></ul>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
